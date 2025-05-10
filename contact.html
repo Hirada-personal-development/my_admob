@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>お問い合わせ</title>
   <style>
-    /* 簡単なCSSで見た目を整える */
     body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
     .form-group { margin-bottom: 15px; }
     label { display: block; margin-bottom: 5px; }
@@ -15,7 +14,8 @@
 </head>
 <body>
   <h1>お問い合わせ</h1>
-  <form action="send_mail.php" method="post">
+  <form name="contact" method="POST" data-netlify="true" action="/thankyou.html">
+    <input type="hidden" name="form-name" value="contact">
     <div class="form-group">
       <label for="name">名前 *</label>
       <input type="text" id="name" name="name" required>
